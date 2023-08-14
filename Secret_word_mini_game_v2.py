@@ -3,7 +3,8 @@ import random
 from english_words import get_english_words_set
 def secret_word(word):
     word = random.choice(word)
-    print('\n'*1000)
+    print("Hello!")
+    print("\n")
     hints = input("Enable hints? y/n\n")
     print('\n')
     word = word.lower()
@@ -64,7 +65,7 @@ def secret_word(word):
                 print("No try(")
     print('\n')
     print("You lose!")
-    print("Word: ", word)
+    print("Word:", word)
     print('Restart? y/n')
     rest = input()
     rest = rest.lower()
@@ -73,6 +74,7 @@ def secret_word(word):
     if rest == 'n':
         time.sleep(1)
         return "bye"
+
 
 
 # words = input("Enter your word:")
