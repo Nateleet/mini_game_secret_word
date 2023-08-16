@@ -1,7 +1,8 @@
 import time
 import random
 from english_words import get_english_words_set
-def secret_word(word):
+def secret_word(words):
+    word = words[:]
     word = random.choice(word)
     print("Hello!")
     print("\n")
@@ -34,11 +35,13 @@ def secret_word(word):
             rest = input()
             rest = rest.lower()
             if rest == 'y':
-                secret_word(word)
-            else:
+                secret_word(words)
+            if rest == 'n':
                 time.sleep(1)
-                print("bye")
-                return ':)'
+                return "bye"
+            else:
+                return "bye"
+
 
         req = input("Enter a letter:")
         req = req.lower()
@@ -70,14 +73,14 @@ def secret_word(word):
     rest = input()
     rest = rest.lower()
     if rest == 'y':
-            secret_word(word)
+            secret_word(words)
     if rest == 'n':
         time.sleep(1)
         return "bye"
+    else:
+        return "bye"
 
 
-
-# words = input("Enter your word:")
 
 
 
