@@ -16,15 +16,16 @@ def secret_word(words):
         try_req = int(input("Enter attempts:"))
     except ValueError:
         print("Error_01: Enter number!")
-        time.sleep(1)
-        return "Restart, please"
+        try_req = int(input("Enter attempts:"))
+    
+
     print('\n')
     print("Secret word:",*secret)
     print('\n')
     attemp_visual = ["*"] * try_req
     if type(try_req) is not int:
         print("Enter number please!")
-        print(try_req)
+        
 
     print('Attemps:',*attemp_visual)
     while er < try_req:
