@@ -1,6 +1,5 @@
 import time
 import random
-from english_words import get_english_words_set
 def secret_word(words):
     word = words[:]
     word = random.choice(word)
@@ -81,15 +80,16 @@ def secret_word(words):
     else:
         return "bye"
 
+with open('word.txt', "r") as f:
+    all_words = []
+    line = f.readline().split()
+    while line:
+        all_words.extend(line)
+        line = f.readline().split()
 
 
 
 
 
-words = get_english_words_set(['web2'])
-words = list(words)
 
-
-
-
-print(secret_word(words))
+print(secret_word(all_words))
